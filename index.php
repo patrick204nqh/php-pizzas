@@ -1,32 +1,36 @@
 <?php
 
-  // comparisons booleans (true or false)
-  // echo true; "1"
-  // echo false; ""
+  // conditional statement
 
-  // numbers
-  // echo 5 < 10;
-  // echo 5 > 10;
-  // echo 5 == 10;
-  // echo 10 == 10;
-  // echo 5 != 10;
-  // echo 5 <= 5;
-  // echo 5 >= 5;
+  // $price = 20;
 
-  // strings
-  // echo 'patrick' < 'robert';
-  // echo 'patrick' > 'robert';
-  // echo 'patrick' > 'Patrick';
-  // echo 'patrick' == 'patrick';
-  // echo 'patrick' == 'Patrick';
+  // if($price < 10) {
+  //   echo 'the condition is met';
+  // } elseif($price < 20) {
+  //   echo 'elseif condition met';
+  // } else {
+  //   echo 'condition not met';
+  // }
 
-  // loose vs strict equal comparison
-  // echo 5 == '5';
-  // echo 5 === '5';
-  // echo 5 === 5;
+  $products = [
+		['name' => 'shiny star', 'price' => 20],
+		['name' => 'green shell', 'price' => 10],
+		['name' => 'red shell', 'price' => 15],
+		['name' => 'gold coin', 'price' => 5],
+		['name' => 'lightning bolt', 'price' => 40],
+		['name' => 'banana skin', 'price' => 2]
+  ];
 
-  // echo true == "1";
-  // echo false == "";
+  // foreach($products as $product) {
+
+    // if($product['price'] < 15 && $product['price'] > 2){
+    //   echo $product['name'] . '<br />';
+    // }
+
+    // if($product['price'] > 20 || $product['price'] < 10){
+    //   echo $product['name'] . '<br />';
+    // }
+  // }
 
 ?>
 
@@ -38,5 +42,16 @@
   <title>PHP</title>
 </head>
 <body>
+
+      <div>
+        <ul>
+          <?php foreach($products as $product) { ?>
+            <?php if($product['price'] > 15){ ?>
+              <li><?php echo $product['name']; ?></li>
+            <?php }?>
+          <?php } ?>
+        </ul>
+      </div>
+
 </body>
 </html>
