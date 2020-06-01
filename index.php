@@ -1,12 +1,24 @@
 <?php
+  $stringOne = 'my email is ';
+  $stringTwo = 'test@patrick.co.uk';
 
-  define('NAME', 'Patrick');
+  // echo $stringOne . $stringTwo;
 
-  // $name = "Patrick";
-  $age = 20;
+  $name = 'robert';
 
-  // $name = 'Robert';
+  // echo 'Hey, my name is ' . $name;
 
+  // echo "Hey my name is $name";
+
+  // echo "patrick \"whaaaa\"";
+  // echo 'The developer "whaaaa"';
+
+  // echo $name[1];
+
+  // echo strlen($name);
+  // echo strtoupper($name);
+  // echo strtolower($name);
+  echo str_replace('r', 'k', $name);
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +29,6 @@
   <title>PHP</title>
 </head>
 <body>
-  <h1>User Profile Page</h1>
 
-  <div><?php echo NAME; ?></div>
-  <div><?php echo $age; ?></div>
 </body>
 </html>
