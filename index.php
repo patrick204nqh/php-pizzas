@@ -1,38 +1,32 @@
 <?php
 
-  // loops
+  // comparisons booleans (true or false)
+  // echo true; "1"
+  // echo false; ""
 
-  $devs = ['patrick', 'robert', 'kevin'];
+  // numbers
+  // echo 5 < 10;
+  // echo 5 > 10;
+  // echo 5 == 10;
+  // echo 10 == 10;
+  // echo 5 != 10;
+  // echo 5 <= 5;
+  // echo 5 >= 5;
 
-  // for($i = 0; $i < count($devs); $i++){
-  //   echo $devs[i] . '<br />';
-  // }
+  // strings
+  // echo 'patrick' < 'robert';
+  // echo 'patrick' > 'robert';
+  // echo 'patrick' > 'Patrick';
+  // echo 'patrick' == 'patrick';
+  // echo 'patrick' == 'Patrick';
 
-  // foreach($devs as $dev){
-  //   echo $dev . '<br />';
-  // }
+  // loose vs strict equal comparison
+  // echo 5 == '5';
+  // echo 5 === '5';
+  // echo 5 === 5;
 
-  $products = [
-		['name' => 'shiny star', 'price' => 20],
-		['name' => 'green shell', 'price' => 10],
-		['name' => 'red shell', 'price' => 15],
-		['name' => 'gold coin', 'price' => 5],
-		['name' => 'lightning bolt', 'price' => 40],
-		['name' => 'banana skin', 'price' => 2]
-  ];
-
-  // foreach($products as $product){
-  //   echo $product['name'] . ' - ' . $product['price'];
-  //   echo '<br />';
-  // }
-
-  // $i = 0;
-
-  // while($i < count($products)){
-  //   echo $products[$i]['name'];
-  //   echo '<br />';
-  //   $i++
-  // }
+  // echo true == "1";
+  // echo false == "";
 
 ?>
 
@@ -44,14 +38,5 @@
   <title>PHP</title>
 </head>
 <body>
-    <h1>Products</h1>
-    <ul>
-      <?php foreach($products as $product){ ?>
-
-        <h3><?php echo $product['name']; ?></h3>
-        <p>$ <?php echo $product['price']; ?></p>
-
-      <?php } ?>
-    </ul>
 </body>
 </html>
