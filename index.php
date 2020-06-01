@@ -1,22 +1,39 @@
 <?php
 
-  // multi-dimensional arrays
+  // loops
 
-  $blogs = [
-    ['title' => 'patrick project', 'author' => 'patrick', 'content' => 'lorem', 'likes' => 20],
-    ['title' => 'robert play game', 'author' => 'robert', 'content' => 'lorem', 'likes' => 25],
-    ['title' => 'kevin score goal', 'author' => 'kevin', 'content' => 'lorem', 'likes' => 29],
+  $devs = ['patrick', 'robert', 'kevin'];
+
+  // for($i = 0; $i < count($devs); $i++){
+  //   echo $devs[i] . '<br />';
+  // }
+
+  // foreach($devs as $dev){
+  //   echo $dev . '<br />';
+  // }
+
+  $products = [
+		['name' => 'shiny star', 'price' => 20],
+		['name' => 'green shell', 'price' => 10],
+		['name' => 'red shell', 'price' => 15],
+		['name' => 'gold coin', 'price' => 5],
+		['name' => 'lightning bolt', 'price' => 40],
+		['name' => 'banana skin', 'price' => 2]
   ];
 
-  // print_r($blogs[1][1]);
-  // echo $blogs[2]['author'];
-  // echo count($blogs);
+  // foreach($products as $product){
+  //   echo $product['name'] . ' - ' . $product['price'];
+  //   echo '<br />';
+  // }
 
-  $blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem', 'likes' => 100];
+  // $i = 0;
 
-  // print_r($blogs);
-  $popped = array_pop($blogs);
-  print_r($popped);
+  // while($i < count($products)){
+  //   echo $products[$i]['name'];
+  //   echo '<br />';
+  //   $i++
+  // }
+
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +44,14 @@
   <title>PHP</title>
 </head>
 <body>
+    <h1>Products</h1>
+    <ul>
+      <?php foreach($products as $product){ ?>
 
+        <h3><?php echo $product['name']; ?></h3>
+        <p>$ <?php echo $product['price']; ?></p>
+
+      <?php } ?>
+    </ul>
 </body>
 </html>
