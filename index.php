@@ -1,46 +1,22 @@
 <?php
 
-  // indexed arrays
+  // multi-dimensional arrays
 
-  $peopleOne = ['patrick', 'robert', 'kevin'];
-  // echo $peopleOne[1];
+  $blogs = [
+    ['title' => 'patrick project', 'author' => 'patrick', 'content' => 'lorem', 'likes' => 20],
+    ['title' => 'robert play game', 'author' => 'robert', 'content' => 'lorem', 'likes' => 25],
+    ['title' => 'kevin score goal', 'author' => 'kevin', 'content' => 'lorem', 'likes' => 29],
+  ];
 
-  $peopleTwo = array('kai', 'steven');
-  // echo $peopleTwo[1];
+  // print_r($blogs[1][1]);
+  // echo $blogs[2]['author'];
+  // echo count($blogs);
 
-  $ages = [20, 30, 40, 50];
-  // print_r($age);
+  $blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem', 'likes' => 100];
 
-  $ages[1] = 25;
-  // print_r($ages);
-
-  $ages[] = 60;
-  // print_r($ages);
-
-  array_push($ages, 70);
-  // print_r($ages);
-
-  // echo count($ages);
-
-  $peopleThree = array_merge($peopleOne, $peopleTwo);
-  // print_r($peopleThree);
-
-  // associative arrays (key $ value pairs)
-
-  $devOne = ['patrick' => 'blue', 'kevin' => 'green', 'robert' => 'yellow'];
-  // echo $devOne['kevin'];
-  // print_r($devOne);
-
-  $devTwo = array('kai' => 'red', 'steven' => 'yellow');
-  // print_r($devTwo);
-
-  $devTwo['steven'] = 'pink';
-  // print_r($devTwo);
-
-  // echo count($devOne);
-
-  $devThree = array_merge($devOne, $devTwo);
-  // print_r($devThree);
+  // print_r($blogs);
+  $popped = array_pop($blogs);
+  print_r($popped);
 ?>
 
 <!DOCTYPE html>
