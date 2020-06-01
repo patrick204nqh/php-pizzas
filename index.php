@@ -1,35 +1,46 @@
 <?php
 
-  $radius = 25;
-  $pi = 3.14;
+  // indexed arrays
 
-  // basic operators - *, /, +, -, **
+  $peopleOne = ['patrick', 'robert', 'kevin'];
+  // echo $peopleOne[1];
 
-  // echo $pi * $radius^2;
+  $peopleTwo = array('kai', 'steven');
+  // echo $peopleTwo[1];
 
-  // order of operation ( B I D M A S )
+  $ages = [20, 30, 40, 50];
+  // print_r($age);
 
-  // echo 2 * (4 + 9) / 3;
+  $ages[1] = 25;
+  // print_r($ages);
 
-  // increment & decrement operators
+  $ages[] = 60;
+  // print_r($ages);
 
-  // echo $radius++;
-  // echo $radius;
+  array_push($ages, 70);
+  // print_r($ages);
 
-  // shorthand operators
+  // echo count($ages);
 
-  $age = 20;
+  $peopleThree = array_merge($peopleOne, $peopleTwo);
+  // print_r($peopleThree);
 
-  // $age -= 10;
-  // $age *= 2;
-  // echo $age;
+  // associative arrays (key $ value pairs)
 
-  // number function
+  $devOne = ['patrick' => 'blue', 'kevin' => 'green', 'robert' => 'yellow'];
+  // echo $devOne['kevin'];
+  // print_r($devOne);
 
-  // echo floor($pi);
-  // echo ceil($pi);
-  echo pi();
+  $devTwo = array('kai' => 'red', 'steven' => 'yellow');
+  // print_r($devTwo);
 
+  $devTwo['steven'] = 'pink';
+  // print_r($devTwo);
+
+  // echo count($devOne);
+
+  $devThree = array_merge($devOne, $devTwo);
+  // print_r($devThree);
 ?>
 
 <!DOCTYPE html>
