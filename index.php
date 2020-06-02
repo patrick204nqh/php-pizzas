@@ -1,44 +1,12 @@
 <?php
 
-// variable scope
+  // include('devs.php');
+  // require('devs.php');
 
-// local vars
+  include 'devs.php';
+  require 'devs.php';
 
-function myFunc() {
-  $price = 10;
-  echo $price;
-}
-
-// myFunc();
-// echo $price;
-
-function myFuncTwo($age) {
- echo $age;
-}
-
-// myFuncTwo(20);
-// echo $age;
-
-// global variables
-
-$name = 'patrick';
-
-// function sayHello() {
-//   global $name;
-//   $name = 'robert';
-//   echo "Hello $name";
-// }
-
-// sayHello();
-// echo $name;
-
-function sayBye(&$name) {
-  $name = 'robert';
-  echo "bye $name";
-}
-
-sayBye($name);
-echo $name;
+  echo 'end of php';
 
 ?>
 
@@ -51,7 +19,8 @@ echo $name;
 </head>
 <body>
 
-
+  <?php include('content.php');?>
+  <?php include('content.php');?>
 
 </body>
 </html>
