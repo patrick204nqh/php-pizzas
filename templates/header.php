@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// $_SESSION['name'] = 'patrick';
+
+if ($_SERVER['QUERY_STRING'] == 'noname') {
+  // unset($_SESSION['name']);
+  session_unset();
+}
+
+$name = $_SESSION['name'];
+?>
+
 <head>
   <title>Patrick Pizza</title>
   <!-- compiled and minified CSS -->
@@ -32,6 +45,7 @@
     <div class="container">
       <a href="index.php" class="brand-logo brand-text">Patrick Pizzas</a>
       <ul id="nav-mobile" class="right hide-on-small-and-down">
+        <li class="grey-text">Hello <?php echo htmlspecialchars($name) ?></li>
         <li><a href="add.php" class="btn brand z-depth-0">Add a Pizza</a></li>
       </ul>
     </div>
