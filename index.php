@@ -42,17 +42,11 @@ mysqli_close($conn);
             </ul>
           </div>
           <div class="card-action right-align">
-            <a href="#" class="brand-text">more info</a>
+            <a href="details.php?id=<?php echo $pizza['id'] ?>" class="brand-text">more info</a>
           </div>
         </div>
       </div>
     <?php endforeach; ?>
-
-    <?php if (count($pizzas) >= 2) : ?>
-      <p>there are 2 or more pizzas</p>
-    <?php else : ?>
-      <p>there are less than 2 pizzas</p>
-    <?php endif; ?>
   </div>
 </div>
 
