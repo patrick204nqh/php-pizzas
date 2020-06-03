@@ -1,38 +1,58 @@
 <?php
 
-// sessions
-if (isset($_POST['submit'])) {
+// // file system
 
-  // cookie for gender
-  setcookie('gender', $_POST['gender'], time() + 86400);
+// // $quotes = readfile('readme.txt');
+// // echo $quotes;
 
-  session_start();
+// $file = 'readme.txt';
 
-  $_SESSION['name'] = $_POST['name'];
+// if (file_exists($file)) {
 
-  echo $_SESSION['name'];
-  header('Location: index.php');
-}
+//   // // read file
+//   // echo readfile($file) . '<br />';
 
+//   // // copy file
+//   // copy($file, 'quote.txt');
 
-?>
+//   // // absolute path
+//   // echo realpath($file) . '<br />';
 
-<!DOCTYPE html>
-<html>
+//   // // file size
+//   // echo filesize($fle) . '<br />';
 
-<head>
-  <title>Document</title>
-</head>
+//   // // rename file
+//   // rename($file, 'test.txt');
 
-<body>
-  <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-    <input type="text" name="name">
-    <select name="gender">
-      <option value="male">male</option>
-      <option value="female">female</option>
-    </select>
-    <input type="submit" value="submit" name="submit">
-  </form>
-</body>
+// } else {
+//   echo 'file does not exist';
+// }
 
-</html>
+// // make director
+// mkdir('quotes');
+
+// ------------ part 2 -------------------
+
+$file = 'quotes.txt';
+
+// open a file for reading
+$handle = fopen($file, 'a+');
+
+// read the file
+// echo fread($handle, filesize($file));
+// echo fread($handle, 112);
+
+// read a single line
+// echo fgets($handle);
+// echo fgets($handle);
+
+// read a single character
+// echo fgetc($handle);
+// echo fgetc($handle);
+
+// writing to a file
+// fwrite($handle, "\nEverything popular is wrong");
+
+fclose($handle);
+
+unlink($file);
