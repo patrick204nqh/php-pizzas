@@ -1,58 +1,48 @@
 <?php
 
-// // file system
+// classes
 
-// // $quotes = readfile('readme.txt');
-// // echo $quotes;
+class User
+{
+  private $email;
+  private $name;
 
-// $file = 'readme.txt';
+  public function __construct($name, $email)
+  {
+    $this->email = $email;
+    $this->name = $name;
+  }
 
-// if (file_exists($file)) {
+  public function login()
+  {
+    // echo 'the user logged in' . '<br />';
+    echo $this->name . ' logged in';
+  }
 
-//   // // read file
-//   // echo readfile($file) . '<br />';
+  public function getName()
+  {
+    return $this->name . '<br />';
+  }
 
-//   // // copy file
-//   // copy($file, 'quote.txt');
+  public function setName($name)
+  {
+    if (is_string($name) && strlen($name) > 1) {
+      $this->name = $name;
+      return "name has been updated to $name";
+    } else {
+      return 'not a valid name';
+    }
+  }
+}
 
-//   // // absolute path
-//   // echo realpath($file) . '<br />';
+// $userOne = new User();
 
-//   // // file size
-//   // echo filesize($fle) . '<br />';
+// $userOne->login();
+// echo $userOne->email;
 
-//   // // rename file
-//   // rename($file, 'test.txt');
+$userTwo = new User('kevin', 'test@kevin.co.uk');
 
-// } else {
-//   echo 'file does not exist';
-// }
-
-// // make director
-// mkdir('quotes');
-
-// ------------ part 2 -------------------
-
-$file = 'quotes.txt';
-
-// open a file for reading
-$handle = fopen($file, 'a+');
-
-// read the file
-// echo fread($handle, filesize($file));
-// echo fread($handle, 112);
-
-// read a single line
-// echo fgets($handle);
-// echo fgets($handle);
-
-// read a single character
-// echo fgetc($handle);
-// echo fgetc($handle);
-
-// writing to a file
-// fwrite($handle, "\nEverything popular is wrong");
-
-fclose($handle);
-
-unlink($file);
+// echo $userTwo->getName();
+// echo $userTwo->setName(50);
+// echo $userTwo->setName('patrick');
+echo $userTwo->getName();
