@@ -1,4 +1,4 @@
-# Patrick's Project (using PHP)
+# Patrick's Project (using PHP & MySQL)
 
 1. Source video:
 
